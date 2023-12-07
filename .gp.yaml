@@ -1,0 +1,15 @@
+name: backoff
+desc: Runbook hub for backoff related issues
+runbooks:
+- name: pod-backoff
+  desc: Runbook for pod backoff
+  selectors:
+  - type: jsonPathSelector
+    selector: '{.apiVersion}=v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=Secret'
+  - type: jsonPathSelector
+    selector: '{.metadata.name}=bootstrap-token-abcdef'
+  - type: jsonPathSelector
+    selector: '{.metadata.namespace}=kube-system'
+  doc: backoff/pod-backoff.md
