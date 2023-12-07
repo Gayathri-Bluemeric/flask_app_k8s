@@ -1,0 +1,15 @@
+name: PodsBackoff
+desc: Runbook hub for Pods Backoff issues
+runbooks:
+- name: backoff
+  desc: Runbook for backoff issues
+  selectors:
+  - type: labelSelector
+    selector: kubernetes.io/bootstrapping=rbac-defaults
+  - type: jsonPathSelector
+    selector: '{.apiVersion}=rbac.authorization.k8s.io/v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=ClusterRole'
+  - type: jsonPathSelector
+    selector: '{.metadata.name}=cluster-admin'
+  doc: backoff/pod-backoff.md
