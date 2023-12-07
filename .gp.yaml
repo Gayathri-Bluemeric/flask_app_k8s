@@ -6,4 +6,6 @@ runbooks:
   selectors:
   - type: jsonPathSelector
     selector: '{.apiVersion}=v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=secrets'
   doc: backoff/pod-backoff.md
