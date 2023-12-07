@@ -7,7 +7,9 @@ runbooks:
   - type: labelSelector
     selector: app=demo
   - type: labelSelector
-    selector: app1=test
+    selector: demo=test1
   - type: jsonPathSelector
     selector: '{.apiVersion}=v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=secrets'
   doc: backoff/pod-backoff.md
