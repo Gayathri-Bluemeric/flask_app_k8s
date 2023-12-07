@@ -1,4 +1,4 @@
-# Kubernetes Secret Resource Troubleshooting Guide
+# Kubernetes Secret Resource Troubleshooting Guide - update
 
 This guide is written to help clarify potential issues and performance enhancements in the described Kubernetes `Secret` resource. This document includes reference to the OpenAPI schema, YAML descriptions, and `kubectl` commands necessary for identifying and resolving any potential issues.
 
