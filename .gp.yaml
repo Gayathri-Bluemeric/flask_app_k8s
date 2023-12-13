@@ -1,0 +1,21 @@
+name: flask-app-hub
+desc: flask-app-hub
+runbooks:
+- name: flask-app-runbook
+  desc: flask-app-runbook
+  selectors:
+  - type: labelSelector
+    selector: cluster-id=cbr9a7a2c67e39d7e465ee9ea7e80ddfc5ebd65
+  - type: labelSelector
+    selector: k8s-app=default-http-backend
+  - type: labelSelector
+    selector: pod-template-hash=6fdf46c858
+  - type: jsonPathSelector
+    selector: '{.apiVersion}=v1'
+  - type: jsonPathSelector
+    selector: '{.kind}=Pod'
+  - type: jsonPathSelector
+    selector: '{.metadata.name}=default-http-backend-6fdf46c858-ck6xq'
+  - type: jsonPathSelector
+    selector: '{.metadata.namespace}=default'
+  doc: demo/flask-app-runbook.md
